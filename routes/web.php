@@ -17,7 +17,7 @@
 
 //Route::get('tasks/create', 'TasksController@create')->name('tasks.create');
 
-//MessagesController@indexを処理
+//TasksController@indexを処理
 Route::get('/', 'TasksController@index');
 
 
