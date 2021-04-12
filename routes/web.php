@@ -27,13 +27,13 @@ Route::get('tasks/create', 'TasksController@create')->name('tasks.create');
 
 
 // CRUD
-// メッセージの個別詳細ページ表示
+// タスクの個別詳細ページ表示
 Route::get('tasks/{task}', 'TasksController@show')->name('tasks.show');
-// メッセージの新規登録を処理（新規登録画面を表示するためのものではありません）
+// タスクの新規登録を処理（新規登録画面を表示するためのものではありません）
 Route::post('tasks', 'TasksController@store')->name('tasks.store');
-// メッセージの更新処理（編集画面を表示するためのものではありません）
+// タスクの更新処理（編集画面を表示するためのものではありません）
 Route::put('tasks/{task}', 'TasksController@update')->name('tasks.update');
-// メッセージを削除
+// タスクを削除
 Route::delete('tasks/{task}', 'TasksController@destroy')->name('tasks.destroy');
 
 
@@ -43,4 +43,4 @@ Route::get('tasks', 'TasksController@index')->name('tasks.index');
 // edit: 更新用のフォームページ
 Route::get('tasks/{task}/edit', 'TasksController@edit')->name('tasks.edit');
 
-//Route::resource('tasks', 'TasksController');
+Route::resource('tasks', 'TasksController');
