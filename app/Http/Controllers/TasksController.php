@@ -71,7 +71,6 @@ class TasksController extends Controller
     // postでtasks/にアクセスされた場合の「新規登録処理」
     public function store(Request $request)
     {
-        if (\Auth::id() === $task->user_id) {// 認証済みユーザ（閲覧者）がその投稿の所有者か確認する
            //dd($request);
            // バリデーション
             $request->validate([
@@ -92,7 +91,6 @@ class TasksController extends Controller
             // $task->status = $request->status; 
             // $task->content = $request->content;
             //$task->save();
-        }
             // トップページへリダイレクトさせる
             return redirect('/');
     }
